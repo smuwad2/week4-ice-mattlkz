@@ -9,6 +9,11 @@
             background-color: goldenrod;
         }
 
+        #div2 {
+            border-radius: 50px;
+        }
+
+
         /* add CSS code here */
         
     </style>
@@ -25,6 +30,18 @@
 
     <script>
         var square=true;
+        function changeShape(){
+            let divElem = document.getElementById("div1");
+            if (square){
+                divElem.style.borderRadius = "50%";
+            }
+            else{
+                divElem.style.borderRadius = "0";
+            }
+            square = !square;
+
+        }
+
        // add code here
         
     </script>

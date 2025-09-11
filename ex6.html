@@ -5,7 +5,7 @@
     <h1>Shopping List</h1>
 
     <select id="select_item">
-        <option value="NoteBook">Notebook</option>
+        <option value="Notebook">Notebook</option>
         <option value="Jello">Jello</option>
         <option value="Spinach">Spinach</option>
         <option value="Rice">Rice</option>
@@ -17,13 +17,17 @@
     <ul id="shopList"></ul>
 
     <script>
-        
-        // add code here
-        
-        
+        const selectElem = document.getElementById("select_item");
+        const ulElem = document.getElementById("shopList");
+
+        // add event listener on change
+        selectElem.addEventListener("change", function() {
+            const newItemVal = selectElem.value;
+            const liElem = document.createElement("li");
+            liElem.innerText = newItemVal;
+            ulElem.appendChild(liElem);
+        });
     </script>
 
-    
-
-    </body>
+</body>
 </html>
